@@ -48,6 +48,12 @@
 
   <!-- Posts -->
   <div id="posts"></div>
+  <div class="d-flex justify-content-between">
+  <span style="cursor:pointer;" onclick="likePost('${doc.id}')">
+    ❤️ ${post.likes || 0}
+  </span>
+</div>
+
 
 </div>
 

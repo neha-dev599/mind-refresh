@@ -12,7 +12,9 @@ body {
 
 /* Cards */
 .card {
-  border-radius: 15px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
 }
 
 /* Post hover effect */
@@ -25,21 +27,8 @@ body {
   transform: translateY(-5px);
 }
 
-/* Buttons */
-.btn-primary:hover {
-  transform: scale(1.03);
-}
 
-/* Dark Mode */
-.dark-mode {
-  background-color: #121212;
-  color: white;
-}
 
-.dark-mode .card {
-  background-color: #1e1e1e;
-  color: white;
-}
 
 /* Like button */
 .like-btn {
@@ -49,4 +38,17 @@ body {
 
 .like-btn.liked {
   color: red;
+}
+body {
+  background: linear-gradient(to right, #e3f2fd, #fce4ec);
+  font-family: 'Segoe UI', sans-serif;
+}
+.btn-primary {
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  transform: scale(1.02);
+  transition: 0.2s;
 }
