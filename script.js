@@ -112,27 +112,6 @@ function addComment(postId) {
 
   input.value = "";
 }
-function likePost(postId) {
-  let postRef = db.collection("posts").doc(postId);
-
-  db.runTransaction((transaction) => {
-    return transaction.get(postRef).then((doc) => {
-      if (!doc.exists) {
-        throw "Document does not exist!";
-      }
-
-      let newLikes = (doc.data().likes || 0) + 1;
-
-      transaction.update(postRef, {
-        likes: newLikes
-      });
-    });
-  }).then(() => {
-    console.log("Like updated ✅");
-  }).catch((error) => {
-    console.error("Error:", error);
-  });
-}
 function likePost(id) {
   let ref = db.collection("posts").doc(id);
 
@@ -143,4 +122,14 @@ function likePost(id) {
       likes: count + 1
     });
   });
+}
+
+function deletePost(postId) {
+  db.collection("posts").doc(postId).delete()
+    .then(() => {
+      console.log("Post deleted ✅");
+    })
+    .catch((error) => {
+      console.log("Error deleting:", error);
+    });
 }

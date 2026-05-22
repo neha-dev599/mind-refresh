@@ -28,7 +28,7 @@
 <div class="hero d-flex align-items-center justify-content-center text-center">
   <div>
     <h1 class="text-white fw-bold">Mind Refresh 🌿</h1>
-    <p class="text-light">Relax your mind. Share your thoughts.</p>
+    <p class="text-light">Relax your mind. Share your thoughts 💭</p>
   </div>
 </div>
 
@@ -37,23 +37,23 @@
 
   <div class="text-center mb-4">
     <h2>Relax. Write. Express 💛</h2>
-    <p class="text-muted">A space to share your thoughts freely</p>
+    <p class="text-muted">A space to share your thoughts freely 🌿</p>
   </div>
 
   <!-- Input Card -->
   <div class="card p-4 shadow-lg mb-4">
-    <textarea id="postInput" class="form-control mb-3" rows="3" placeholder="What's on your mind?"></textarea>
-    <button class="btn btn-primary w-100 fw-semibold" onclick="addPost()">Post Thought ✨</button>
+    <p class="text-muted small">Share something positive 💛</p>
+
+    <textarea id="postInput" class="form-control mb-3" rows="3"
+      placeholder="What's on your mind?"></textarea>
+
+    <button class="btn btn-primary w-100 fw-semibold" onclick="addPost()">
+      Post Thought ✨
+    </button>
   </div>
 
-  <!-- Posts -->
+  <!-- ✅ POSTS WILL LOAD HERE (IMPORTANT) -->
   <div id="posts"></div>
-  <div class="d-flex justify-content-between">
-  <span style="cursor:pointer;" onclick="likePost('${doc.id}')">
-    ❤️ ${post.likes || 0}
-  </span>
-</div>
-
 
 </div>
 
@@ -62,8 +62,12 @@
   <small>✨ Your safe space for thoughts</small>
 </footer>
 
+<!-- Firebase -->
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<!-- Script file -->
 <script src="script.js"></script>
+
 </body>
 </html>
