@@ -1,0 +1,52 @@
+body {
+  background: #f8f9fa;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Hero Section */
+.hero {
+  height: 250px;
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center/cover;
+  border-radius: 0 0 20px 20px;
+}
+
+/* Cards */
+.card {
+  border-radius: 15px;
+}
+
+/* Post hover effect */
+.post-card {
+  transition: 0.3s;
+  border-left: 4px solid #0d6efd;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Buttons */
+.btn-primary:hover {
+  transform: scale(1.03);
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode .card {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+/* Like button */
+.like-btn {
+  cursor: pointer;
+  color: gray;
+}
+
+.like-btn.liked {
+  color: red;
+}
